@@ -2,6 +2,15 @@
   "name": "pinata-admin",
   "version": "0.0.1",
   "private": true,
+  "license": "MIT",
+  "keywords": [
+    "pinata",
+    "admin",
+    "template",
+    "vite",
+    "vue"
+  ],
+  "author": "zenghp2015<zenghp2015@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
