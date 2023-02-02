@@ -28,4 +28,8 @@ coverage
 *.sln
 *.sw?
 
+# docs
+docs/.vitepress/cache
+
+# d.ts
 auto-imports.d.ts
