@@ -1,9 +1,10 @@
 import { fileURLToPath, URL } from "node:url";
-
+import { resolve } from "node:path";
 import { defineConfig } from "vite";
+import { viteMockServe } from "vite-plugin-mock";
+
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-
 import AutoImport from "unplugin-auto-import/vite";
 
 // https://vitejs.dev/config/
@@ -14,6 +15,9 @@ export default defineConfig({
     AutoImport({
       imports: ["vue", "vue-router", "pinia"],
       dts: true,
+    }),
+    viteMockServe({
+      mockPath: resolve(__dirname, "mocker"),
     }),
   ],
   resolve: {
