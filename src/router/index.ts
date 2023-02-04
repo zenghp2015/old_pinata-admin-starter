@@ -4,17 +4,35 @@ import {
   createWebHistory,
 } from "vue-router";
 
-const routes: RouteRecordRaw[] = [
+const modules = import.meta.glob("./modules/*.ts", {
+  eager: true,
+  import: "default",
+});
+
+const importModuleRouter = function importModuleRouter() {
+  const routerList: RouteRecordRaw[] = [];
+  Object.keys(modules).forEach((key) => {
+    const mod = modules[key] || {};
+    const modList = Array.isArray(mod) ? [...mod] : [mod];
+    routerList.push(...modList);
+  });
+  return routerList;
+};
+
+const syncRoutes: RouteRecordRaw[] = importModuleRouter();
+const constantRoutes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "root",
-    redirect: "",
+    redirect: "/dashboard/base",
   },
 ];
 
+export const allRoutes = [...constantRoutes, ...syncRoutes];
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: allRoutes,
   scrollBehavior() {
     return {
       el: "#app",

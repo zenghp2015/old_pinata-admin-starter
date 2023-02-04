@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 <template>
-  <RouterView />
+  <div class="dashboard-base">base</div>
 </template>
 <style lang="less" scoped></style>
