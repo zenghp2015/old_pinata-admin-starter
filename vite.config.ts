@@ -15,6 +15,11 @@ export default defineConfig({
     AutoImport({
       imports: ["vue", "vue-router", "pinia"],
       dts: true,
+      eslintrc: {
+        enabled: true,
+        filepath: "./.eslintrc-auto-import.json", 
+        globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+      },
     }),
     viteMockServe({
       mockPath: resolve(__dirname, "mocker"),

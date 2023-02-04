@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <t-menu theme="dark">
     <template #logo>
@@ -20,5 +18,17 @@
     <t-menu-item value="item9"> 资源编辑 </t-menu-item>
   </t-menu>
 </template>
+
+<script setup lang="ts">
+import Logo from "@/assets/images/logo.svg?component";
+import LogoFull from "@/assets/images/logo-full.svg?component";
+
+console.log(Logo);
+console.log(LogoFull);
+
+const getLogo = () => {
+  return Logo;
+};
+</script>
 
 <style lang="less" scoped></style>

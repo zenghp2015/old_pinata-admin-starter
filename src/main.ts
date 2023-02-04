@@ -8,6 +8,8 @@ import App from "./App.vue";
 import "tdesign-vue-next/es/style/index.css";
 import "./assets/styles/main.less";
 
+import "./permission";
+
 const app = createApp(App);
 
 app.use(store);
