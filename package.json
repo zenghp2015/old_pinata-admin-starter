@@ -1,5 +1,5 @@
 {
-  "name": "pinata-admin",
+  "name": "pinata-admin-starter",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -11,6 +11,9 @@
     "vue"
   ],
   "author": "zenghp2015<zenghp2015@gmail.com>",
+  "engines": {
+    "node": ">= 16.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
