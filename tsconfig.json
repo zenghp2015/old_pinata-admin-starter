@@ -3,6 +3,11 @@
   "include": ["env.d.ts", "auto-imports.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }

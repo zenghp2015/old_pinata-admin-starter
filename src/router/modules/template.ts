@@ -12,11 +12,11 @@ const routes: RouteRecordRaw[] = [
         name: "tpl-dashboard-base",
         component: () => import("@/pages/dashboard/base/index.vue"),
       },
-      {
-        path: "detail",
-        name: "tpl-dashboard-detail",
-        component: () => import("@/pages/dashboard/detail/index.vue"),
-      },
+      // {
+      //   path: "detail",
+      //   name: "tpl-dashboard-detail",
+      //   component: () => import("@/pages/dashboard/detail/index.vue"),
+      // },
     ],
   },
   {
